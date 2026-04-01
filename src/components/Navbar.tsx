@@ -33,7 +33,17 @@ export default function Navbar() {
     { label: 'Kosten', href: '/kosten' },
     { label: 'Zelf Doen', href: '/zelf-doen' },
     { label: 'Subsidie', href: '/subsidie' },
-    { label: 'Voordelen & Nadelen', href: '/voordelen-nadelen' },
+    {
+      label: 'Advies',
+      href: '/welke-vloer',
+      submenu: [
+        { label: 'Welke Vloer Kiezen', href: '/welke-vloer' },
+        { label: 'Offerte Checklist', href: '/offerte-checklist' },
+        { label: 'Opstookprotocol', href: '/opstookprotocol' },
+        { label: 'Onderhoud', href: '/onderhoud' },
+        { label: 'Voordelen & Nadelen', href: '/voordelen-nadelen' },
+      ],
+    },
     {
       label: 'Per Ruimte',
       href: '/per-ruimte',

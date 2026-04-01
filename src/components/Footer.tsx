@@ -91,7 +91,7 @@ export default function Footer() {
 
           {/* Handige Tools Column */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Handige Tools</h3>
+            <h3 className="font-semibold text-white mb-4">Advies & Tools</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/kosten" className="text-sm hover:text-orange-400 transition-colors">
@@ -99,13 +99,23 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/zelf-doen" className="text-sm hover:text-orange-400 transition-colors">
-                  Zelf doen gids
+                <Link href="/welke-vloer" className="text-sm hover:text-orange-400 transition-colors">
+                  Welke vloer kiezen
                 </Link>
               </li>
               <li>
-                <Link href="/subsidie" className="text-sm hover:text-orange-400 transition-colors">
-                  Subsidie info
+                <Link href="/offerte-checklist" className="text-sm hover:text-orange-400 transition-colors">
+                  Offerte checklist
+                </Link>
+              </li>
+              <li>
+                <Link href="/opstookprotocol" className="text-sm hover:text-orange-400 transition-colors">
+                  Opstookprotocol
+                </Link>
+              </li>
+              <li>
+                <Link href="/onderhoud" className="text-sm hover:text-orange-400 transition-colors">
+                  Onderhoud
                 </Link>
               </li>
               <li>
@@ -116,6 +126,11 @@ export default function Footer() {
               <li>
                 <Link href="/voordelen-nadelen" className="text-sm hover:text-orange-400 transition-colors">
                   Voordelen & Nadelen
+                </Link>
+              </li>
+              <li>
+                <Link href="/expert" className="text-sm hover:text-orange-400 transition-colors">
+                  Technisch Handboek
                 </Link>
               </li>
             </ul>

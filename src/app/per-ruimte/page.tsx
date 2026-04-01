@@ -179,6 +179,24 @@ function RoomCard({ room, icon }: RoomCardProps) {
       <Zap className="w-5 h-5" />
     );
 
+  // Map room IDs to individual page URLs
+  const getPageUrl = (roomId: string): string => {
+    switch (roomId) {
+      case 'woonkamer':
+        return '/vloerverwarming-woonkamer';
+      case 'badkamer':
+        return '/vloerverwarming-badkamer';
+      case 'keuken':
+        return '/vloerverwarming-keuken';
+      case 'slaapkamer':
+        return '/vloerverwarming-slaapkamer';
+      default:
+        return '/per-ruimte';
+    }
+  };
+
+  const pageUrl = getPageUrl(room.id);
+
   return (
     <div
       className={`bg-gradient-to-br ${room.bgGradient} rounded-xl border border-stone-200 p-8 hover:shadow-lg transition-all`}
@@ -187,7 +205,11 @@ function RoomCard({ room, icon }: RoomCardProps) {
       <div className="mb-6 flex items-start justify-between">
         <div>
           <div className="mb-4">{icon}</div>
-          <h3 className="text-3xl font-bold text-stone-900">{room.naam}</h3>
+          <Link href={pageUrl}>
+            <h3 className="text-3xl font-bold text-stone-900 hover:text-orange-600 transition-colors cursor-pointer">
+              {room.naam}
+            </h3>
+          </Link>
         </div>
       </div>
 
@@ -250,7 +272,7 @@ function RoomCard({ room, icon }: RoomCardProps) {
       </div>
 
       {/* Suitable Floor Types */}
-      <div className="bg-white rounded-lg p-4 border border-stone-200">
+      <div className="bg-white rounded-lg p-4 border border-stone-200 mb-6">
         <h4 className="font-semibold text-stone-900 mb-3 text-sm">
           GESCHIKTE VLOERTYPEN
         </h4>
@@ -265,6 +287,15 @@ function RoomCard({ room, icon }: RoomCardProps) {
           ))}
         </div>
       </div>
+
+      {/* Read More Link */}
+      <Link
+        href={pageUrl}
+        className="inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-stone-50 text-stone-900 font-semibold rounded-lg transition-colors border border-stone-200"
+      >
+        Bekijk volledig advies
+        <ChevronRight className="w-4 h-4" />
+      </Link>
     </div>
   );
 }

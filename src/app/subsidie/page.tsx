@@ -397,6 +397,31 @@ export default function SubsidiePage() {
           </div>
         </section>
 
+        {/* Subsidie Check CTA */}
+        <section className="max-w-4xl mx-auto px-4 py-12">
+          <div className="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl p-8 md:p-12 text-white text-center relative overflow-hidden">
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-4 right-4 w-32 h-32 bg-white rounded-full blur-3xl"></div>
+              <div className="absolute bottom-4 left-4 w-24 h-24 bg-emerald-300 rounded-full blur-2xl"></div>
+            </div>
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+                <div className="w-2 h-2 bg-emerald-300 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium">Gratis & vrijblijvend</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Kom jij in aanmerking voor subsidie?</h2>
+              <p className="mb-8 text-lg text-emerald-100 max-w-xl mx-auto">Check in 2 minuten of je recht hebt op subsidie. Beantwoord 7 simpele vragen en ontvang persoonlijk advies.</p>
+              <Link
+                href="/subsidie-check"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-emerald-700 font-bold rounded-xl hover:bg-emerald-50 transition-colors shadow-lg hover:shadow-xl"
+              >
+                <CheckCircle className="w-5 h-5" />
+                Start de Subsidie Check
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <FAQSchema items={faqItems} />
 

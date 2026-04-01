@@ -25,45 +25,33 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Vloerverwarming Column */}
+          {/* Soorten Vloerverwarming Column */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Vloerverwarming</h3>
+            <h3 className="font-semibold text-white mb-4">Soorten Vloerverwarming</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/soorten" className="text-sm hover:text-orange-400 transition-colors">
-                  Soorten
+                <Link href="/watervloerverwarming" className="text-sm hover:text-orange-400 transition-colors">
+                  Watervloerverwarming
                 </Link>
               </li>
               <li>
-                <Link href="/kosten" className="text-sm hover:text-orange-400 transition-colors">
-                  Kosten
+                <Link href="/elektrische-vloerverwarming" className="text-sm hover:text-orange-400 transition-colors">
+                  Elektrische Vloerverwarming
                 </Link>
               </li>
               <li>
-                <Link href="/voordelen-nadelen" className="text-sm hover:text-orange-400 transition-colors">
-                  Voordelen & Nadelen
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Handige Tools Column */}
-          <div>
-            <h3 className="font-semibold text-white mb-4">Handige Tools</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/calculator" className="text-sm hover:text-orange-400 transition-colors">
-                  Calculator
+                <Link href="/infrarood-vloerverwarming" className="text-sm hover:text-orange-400 transition-colors">
+                  Infrarood Vloerverwarming
                 </Link>
               </li>
               <li>
-                <Link href="/zelf-doen" className="text-sm hover:text-orange-400 transition-colors">
-                  Zelf Doen
+                <Link href="/droog-systeem" className="text-sm hover:text-orange-400 transition-colors">
+                  Droog Systeem
                 </Link>
               </li>
               <li>
-                <Link href="/subsidie" className="text-sm hover:text-orange-400 transition-colors">
-                  Subsidie
+                <Link href="/soorten" className="text-sm hover:text-orange-400 transition-colors font-semibold">
+                  Alle soorten
                 </Link>
               </li>
             </ul>
@@ -74,18 +62,60 @@ export default function Footer() {
             <h3 className="font-semibold text-white mb-4">Per Ruimte</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/badkamer" className="text-sm hover:text-orange-400 transition-colors">
+                <Link href="/vloerverwarming-woonkamer" className="text-sm hover:text-orange-400 transition-colors">
+                  Woonkamer
+                </Link>
+              </li>
+              <li>
+                <Link href="/vloerverwarming-badkamer" className="text-sm hover:text-orange-400 transition-colors">
                   Badkamer
                 </Link>
               </li>
               <li>
-                <Link href="/keuken" className="text-sm hover:text-orange-400 transition-colors">
+                <Link href="/vloerverwarming-keuken" className="text-sm hover:text-orange-400 transition-colors">
                   Keuken
                 </Link>
               </li>
               <li>
-                <Link href="/woonkamer" className="text-sm hover:text-orange-400 transition-colors">
-                  Woonkamer
+                <Link href="/vloerverwarming-slaapkamer" className="text-sm hover:text-orange-400 transition-colors">
+                  Slaapkamer
+                </Link>
+              </li>
+              <li>
+                <Link href="/per-ruimte" className="text-sm hover:text-orange-400 transition-colors font-semibold">
+                  Alle ruimtes
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Handige Tools Column */}
+          <div>
+            <h3 className="font-semibold text-white mb-4">Handige Tools</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/kosten" className="text-sm hover:text-orange-400 transition-colors">
+                  Kosten berekenen
+                </Link>
+              </li>
+              <li>
+                <Link href="/zelf-doen" className="text-sm hover:text-orange-400 transition-colors">
+                  Zelf doen gids
+                </Link>
+              </li>
+              <li>
+                <Link href="/subsidie" className="text-sm hover:text-orange-400 transition-colors">
+                  Subsidie info
+                </Link>
+              </li>
+              <li>
+                <Link href="/subsidie-check" className="text-sm hover:text-orange-400 transition-colors">
+                  Subsidie Check
+                </Link>
+              </li>
+              <li>
+                <Link href="/voordelen-nadelen" className="text-sm hover:text-orange-400 transition-colors">
+                  Voordelen & Nadelen
                 </Link>
               </li>
             </ul>
@@ -97,7 +127,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/over" className="text-sm hover:text-orange-400 transition-colors">
-                  Over
+                  Over vloerverwarmingkenner
                 </Link>
               </li>
               <li>

@@ -55,10 +55,32 @@ const getIconForType = (id: string) => {
 
 // Type Card Component - Pure server component
 function TypeCard({ type, icon }: TypeCardProps) {
+  // Map type IDs to individual page URLs
+  const getPageUrl = (typeId: string): string => {
+    switch (typeId) {
+      case 'water':
+        return '/watervloerverwarming';
+      case 'elektrisch':
+        return '/elektrische-vloerverwarming';
+      case 'infrarood':
+        return '/infrarood-vloerverwarming';
+      case 'droog-systeem':
+        return '/droog-systeem';
+      default:
+        return '/soorten';
+    }
+  };
+
+  const pageUrl = getPageUrl(type.id);
+
   return (
     <div className="bg-white rounded-lg border border-stone-200 p-8 hover:shadow-lg transition-shadow">
       <div className="mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-stone-900 mb-3">{type.naam}</h3>
+      <Link href={pageUrl}>
+        <h3 className="text-2xl font-bold text-stone-900 mb-3 hover:text-orange-600 transition-colors cursor-pointer">
+          {type.naam}
+        </h3>
+      </Link>
       <p className="text-stone-600 mb-6 leading-relaxed">{type.beschrijving}</p>
 
       <div className="space-y-4 mb-6 pb-6 border-b border-stone-200">
@@ -128,7 +150,7 @@ function TypeCard({ type, icon }: TypeCardProps) {
       </div>
 
       {/* DIY */}
-      <div className="flex items-center gap-2 p-3 rounded-lg bg-stone-50 border border-stone-200">
+      <div className="flex items-center gap-2 p-3 rounded-lg bg-stone-50 border border-stone-200 mb-6">
         {type.zelfDoen ? (
           <>
             <Check className="w-5 h-5 text-green-600" />
@@ -141,6 +163,15 @@ function TypeCard({ type, icon }: TypeCardProps) {
           </>
         )}
       </div>
+
+      {/* Read More Link */}
+      <Link
+        href={pageUrl}
+        className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 hover:bg-orange-100 text-orange-600 font-semibold rounded-lg transition-colors border border-orange-200"
+      >
+        Lees meer
+        <ChevronRight className="w-4 h-4" />
+      </Link>
     </div>
   );
 }

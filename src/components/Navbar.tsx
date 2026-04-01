@@ -73,28 +73,35 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <div key={item.href} className="relative group">
-                <button
-                  className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-orange-500 ${textColor}`}
-                >
-                  {item.label}
-                  {item.submenu && <ChevronDown className="w-4 h-4" />}
-                </button>
-
-                {/* Desktop Dropdown */}
-                {item.submenu && (
-                  <div className={`absolute left-0 mt-0 w-56 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${dropdownBg}`}>
-                    <div className="py-2">
-                      {item.submenu.map((subitem) => (
-                        <Link
-                          key={subitem.href}
-                          href={subitem.href}
-                          className={`block px-4 py-2 text-sm font-medium transition-colors ${dropdownText} ${dropdownHover}`}
-                        >
-                          {subitem.label}
-                        </Link>
-                      ))}
+                {item.submenu ? (
+                  <>
+                    <div className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-orange-500 ${textColor}`}>
+                      <Link href={item.href}>{item.label}</Link>
+                      <ChevronDown className="w-3.5 h-3.5 mt-0.5" />
                     </div>
-                  </div>
+
+                    {/* Desktop Dropdown */}
+                    <div className={`absolute left-0 mt-0 w-56 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${dropdownBg}`}>
+                      <div className="py-2">
+                        {item.submenu.map((subitem) => (
+                          <Link
+                            key={subitem.href}
+                            href={subitem.href}
+                            className={`block px-4 py-2 text-sm font-medium transition-colors ${dropdownText} ${dropdownHover}`}
+                          >
+                            {subitem.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`text-sm font-medium transition-colors hover:text-orange-500 ${textColor}`}
+                  >
+                    {item.label}
+                  </Link>
                 )}
               </div>
             ))}

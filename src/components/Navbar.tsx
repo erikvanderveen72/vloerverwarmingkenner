@@ -18,12 +18,12 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { label: 'Soorten', href: '#soorten' },
-    { label: 'Kosten', href: '#kosten' },
-    { label: 'Zelf Doen', href: '#zelf-doen' },
-    { label: 'Subsidie', href: '#subsidie' },
-    { label: 'Voordelen & Nadelen', href: '#voordelen-nadelen' },
-    { label: 'Per Ruimte', href: '#per-ruimte' },
+    { label: 'Soorten', href: '/soorten' },
+    { label: 'Kosten', href: '/kosten' },
+    { label: 'Zelf Doen', href: '/zelf-doen' },
+    { label: 'Subsidie', href: '/subsidie' },
+    { label: 'Voordelen & Nadelen', href: '/voordelen-nadelen' },
+    { label: 'Per Ruimte', href: '/per-ruimte' },
   ];
 
   const bgColor = scrollY > 20 ? 'bg-white shadow-md' : 'bg-gradient-to-b from-stone-950 to-stone-900';
